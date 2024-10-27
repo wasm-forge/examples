@@ -1,7 +1,8 @@
 #!/bin/bash
 
-export RELEASE_DIR=./target/wasm32-wasip1/release
 set -e
+
+export RELEASE_DIR=./target/wasm32-wasip1/release
 
 pushd `pwd`
 

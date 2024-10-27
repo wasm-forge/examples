@@ -3,7 +3,7 @@
     "hello-world-cpp-backend": {
       "candid": "src/hello-world-cpp-backend/hello-world-cpp-backend.did",
       "package": "hello-world-cpp-backend",
-      "type": "rust"
+      "type": "custom"
     }
   },
   "defaults": {
