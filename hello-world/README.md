@@ -1,6 +1,6 @@
 # Basic "Hello World" example project
 
-This is a simple "hello world" example project that can be compiled to `wasm32-wasi` target and run in dfx.
+This is a simple "hello world" example project that can be compiled to the `wasm32-wasip1` target and run in dfx.
 
 It is assumed that you have installed [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) and [dfx](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
 
@@ -19,9 +19,9 @@ Start the `dfx` environment in a separate console:
   dfx start --clean
 ```
 
-To build and deploy the canister, run the build script:
+To build and deploy the canister, run the command:
 ```bash
-  ./scripts/build.sh
+  dfx deploy
 ```
 
 You can now do the canister call:
@@ -29,5 +29,6 @@ You can now do the canister call:
   dfx canister call hello-world-backend greet '("test")'
 ```
 
-
+Adter calling the canister, you should see the both messages:
+ *"Hello from IC debugger: test"* and *"Hello from WASI: test"* in the dfx console.
 
