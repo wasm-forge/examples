@@ -27,5 +27,5 @@ dist/
 #
 **/*.wasm
 
-**/ic-wasi-polyfill
+ic-wasi-polyfill/
 
