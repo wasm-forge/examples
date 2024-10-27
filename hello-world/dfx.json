@@ -4,7 +4,7 @@
       "candid": "src/hello-world-backend/hello-world-backend.did",
       "package": "hello-world-backend",
       "build": "./scripts/build.sh",
-        "wasm": "target/wasm32-wasip1/release/no_wasi.wasm",
+      "wasm": "target/wasm32-wasip1/release/no_wasi.wasm",
       "type": "custom"
     }
   },
