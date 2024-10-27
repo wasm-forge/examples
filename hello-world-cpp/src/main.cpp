@@ -35,6 +35,7 @@ extern "C" __EXPORT(canister_query greet) __attribute__((noinline)) void greet()
     
     std::string content = s_msg[0] + s;
 
+
     // do some file operations
     std::ofstream ofile("content.txt");
     ofile << "File content: " << content;

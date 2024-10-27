@@ -17,10 +17,12 @@ fi
 
 [ -d target ] || mkdir target
 
+dfx canister create hello-world-cpp-backend
+
 /opt/wasi-sdk/bin/clang++ -mexec-model=reactor -fno-exceptions src/main.cpp -L./ic-wasi-polyfill/target/wasm32-wasip1/release -lic_wasi_polyfill -o target/main.wasm
 
-ic-wasm target/main.wasm -o target/meta.wasm metadata candid:service -f ./src/hello-cpp.did -v public
+#ic-wasm target/main.wasm -o target/meta.wasm metadata candid:service -f ./src/hello-cpp.did -v public
 
-wasi2ic target/meta.wasm target/nowasi.wasm
+wasi2ic target/main.wasm target/no_wasi.wasm
 
 popd

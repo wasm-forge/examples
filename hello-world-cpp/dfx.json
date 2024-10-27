@@ -1,8 +1,10 @@
 {
   "canisters": {
     "hello-world-cpp-backend": {
-      "candid": "src/hello-world-cpp-backend/hello-world-cpp-backend.did",
+      "candid": "src/hello-cpp.did",
       "package": "hello-world-cpp-backend",
+      "build": "./scripts/build.sh",
+      "wasm": "target/no_wasi.wasm",
       "type": "custom"
     }
   },
