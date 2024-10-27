@@ -1,2 +1,4 @@
-# examples
-Examples of running WASI applications on the Internet Computer
+# Examples
+
+This repository contains various examples of building wasi canisters for running on the Internet Computer.
+
