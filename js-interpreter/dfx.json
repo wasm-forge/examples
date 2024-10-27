@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "js-interpreter-backend": {
+      "candid": "src/js-interpreter-backend/js-interpreter-backend.did",
+      "package": "js-interpreter-backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

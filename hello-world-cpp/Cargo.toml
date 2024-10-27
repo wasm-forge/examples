@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/hello-world-cpp-backend"
+]
+resolver = "2"

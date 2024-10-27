@@ -1,0 +1,17 @@
+{
+  "canisters": {
+    "ic-rusqlite-backend": {
+      "candid": "src/ic-rusqlite-backend/ic-rusqlite-backend.did",
+      "package": "ic-rusqlite-backend",
+      "type": "rust"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

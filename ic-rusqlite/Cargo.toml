@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/ic-rusqlite-backend"
+]
+resolver = "2"
