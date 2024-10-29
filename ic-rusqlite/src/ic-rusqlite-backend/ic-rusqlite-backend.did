@@ -1,3 +1,15 @@
+type Error = variant {
+    InvalidCanister;
+    CanisterError: text;
+};
+
+type Result = variant {
+  Ok: vec vec text;
+  Err: Error;
+};
+
 service : {
-    "greet": (text) -> (text) query;
+    "add": (name: text, data: text, age: nat32) -> ();
+    "list": () -> (vec record {nat64; text; text; nat32});
+    "query": (text) -> (Result);
 }
