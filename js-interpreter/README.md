@@ -30,6 +30,4 @@ To test the canister, launch ./scripts/test.sh:
   ./scripts/test.sh
 ```
 
-Adter calling the canister, you should see the both messages:
- *"Hello from IC debugger: test"* and *"Hello from WASI: test"* in the dfx console.
 
