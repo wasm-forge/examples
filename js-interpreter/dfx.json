@@ -3,7 +3,9 @@
     "js-interpreter-backend": {
       "candid": "src/js-interpreter-backend/js-interpreter-backend.did",
       "package": "js-interpreter-backend",
-      "type": "rust"
+      "build": "./scripts/build.sh",
+      "wasm": "target/wasm32-wasip1/release/no_wasi.wasm",
+      "type": "custom"
     }
   },
   "defaults": {
