@@ -9,7 +9,7 @@ Basic example of creating a "Hello World" application using Rust and running it 
 Basic example of creating a "Hello World" application using C++ and running it on the Internet Computer.
 
 ### ic-rusqlite
-Example of running the Sqllite server on the Internet Computer.
+Example of running the Sqlite server on the Internet Computer.
 
 ### js-interpreter
 Example of running the Boa JavaScript interpretter on the Internet Computer.
@@ -18,6 +18,6 @@ Example of running the Boa JavaScript interpretter on the Internet Computer.
 # Examples from other repositories
 
 ### [ic-sqlite-chat](https://github.com/kristoferlund/ic-sqlite-chat)
-An example chat application based on sqlite.
+An example chat canister based on sqlite.
 
 
