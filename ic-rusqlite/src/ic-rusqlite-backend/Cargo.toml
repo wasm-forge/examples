@@ -10,13 +10,15 @@ crate-type = ["cdylib"]
 
 [dependencies]
 candid = "0.10"
-ic-cdk = "0.16"
+ic-cdk = "0.17"
 hex = "0.4.3"
 serde = "1.0.164"
 serde_json = "1.0.97"
+ic-stable-structures = "0.6.7"
 
-ic-wasi-polyfill = "0.6.4"
+ic-wasi-polyfill = {version = "0.7", features= ["report_wasi_calls"]}
 
-ic-stable-structures = "0.6.5"
-rusqlite = {version = "0.32.1", features = ["bundled", "wasm32-wasi-vfs"] }
+
+rusqlite = {git = "https://github.com/rusqlite/rusqlite.git", features = ["bundled", "wasm32-wasi-vfs"] }
+
 

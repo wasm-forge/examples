@@ -4,7 +4,7 @@
       "candid": "src/ic-rusqlite-backend/ic-rusqlite-backend.did",
       "package": "ic-rusqlite-backend",
       "build": "./scripts/build.sh",
-      "wasm": "target/wasm32-wasi/release/no_wasi.wasm.gz",
+      "wasm": "target/wasm32-wasip1/release/no_wasi.wasm.gz",
       "type": "custom"
     }
   },

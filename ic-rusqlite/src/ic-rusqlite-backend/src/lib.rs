@@ -1,5 +1,4 @@
 use std::cell::RefCell;
-use std::ptr::null;
 
 use candid::CandidType;
 use candid::Deserialize;
