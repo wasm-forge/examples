@@ -1,11 +1,14 @@
-use std::cell::RefCell;
-
-use ic_stable_structures::memory_manager::MemoryId;
-use ic_stable_structures::{memory_manager::MemoryManager, DefaultMemoryImpl};
-use std::env;
-use std::fs::{self, File};
-use std::io::Write;
-use std::path::Path;
+use ic_stable_structures::{
+    memory_manager::{MemoryId, MemoryManager},
+    DefaultMemoryImpl,
+};
+use std::{
+    cell::RefCell,
+    env,
+    fs::{self, File},
+    io::Write,
+    path::Path,
+};
 
 thread_local! {
     static MEMORY_MANAGER: RefCell<MemoryManager<DefaultMemoryImpl>> =
