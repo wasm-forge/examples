@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "stable-fs-backend": {
+      "candid": "src/stable-fs-backend/stable-fs-backend.did",
+      "package": "stable-fs-backend",
+      "build": "./scripts/build.sh",
+      "wasm": "target/wasm32-wasip1/release/no_wasi.wasm",
+      "type": "custom"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
