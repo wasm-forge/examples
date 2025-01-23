@@ -22,7 +22,7 @@ fn init_wasi() {
     ic_wasi_polyfill::init_with_memory(&[0u8; 32], &[], wasi_memory);
 }
 
-#[ic_cdk::query]
+#[ic_cdk::update]
 fn greet(name: String) -> String {
     // Create a directory named "data"
     fs::create_dir_all("data").unwrap();
