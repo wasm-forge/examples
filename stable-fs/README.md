@@ -31,7 +31,7 @@ You can now do the canister call:
   dfx canister call stable-fs-backend greet '("test")'
 ```
 
-Adter calling the canister, you should see the message:
+After calling the canister, you should see the message:
 
 `("Hello from test.\nThis is a new line of text, should be there in a file.\n")`
  
