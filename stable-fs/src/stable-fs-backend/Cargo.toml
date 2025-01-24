@@ -1,0 +1,15 @@
+[package]
+name = "stable-fs-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.17"
+ic-stable-structures = "0.6.7"
+ic-wasi-polyfill = { version = "0.7" }
