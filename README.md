@@ -14,6 +14,9 @@ Example of running the Sqlite server on the Internet Computer.
 ### js-interpreter
 Example of running the Boa JavaScript interpretter on the Internet Computer.
 
+### stable-fs
+Basic example of working with folders via std::fs.
+
 
 # Examples from other repositories
 
