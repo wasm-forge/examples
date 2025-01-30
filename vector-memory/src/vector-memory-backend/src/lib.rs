@@ -6,7 +6,7 @@ use std::{
 
 use ic_stable_structures::VectorMemory;
 
-// initialize new vector memory from a vector (could be filled with some data already)
+// initialize new vector memory from a vector
 fn new_vector_memory(v: Vec<u8>) -> VectorMemory {
     use std::{cell::RefCell, rc::Rc};
     Rc::new(RefCell::new(v))
@@ -20,6 +20,11 @@ fn init_wasi() {
     MEMORY.with(|m| {
         ic_wasi_polyfill::init_with_memory(&[0u8; 32], &[], m.clone());
     });
+}
+
+#[ic_cdk::init]
+fn init() {
+    init_wasi();
 }
 
 #[ic_cdk::update]
@@ -50,14 +55,4 @@ pub fn write_file(file_name: String, content: String) {
 #[ic_cdk::update]
 pub fn read_file(file_name: String) -> String {
     fs::read_to_string(&file_name).unwrap()
-}
-
-#[ic_cdk::init]
-fn init() {
-    init_wasi();
-}
-
-#[ic_cdk::post_upgrade]
-fn post_upgrade() {
-    init_wasi();
 }

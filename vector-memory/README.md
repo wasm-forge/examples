@@ -1,8 +1,6 @@
-# Filesystem memory consumption estimation
+# Filesystem inside a vector memory with memory consumption estimation
 
-This is a simple filesystem example project that can be compiled to the `wasm32-wasip1` target and run in dfx.
-
-It demonstrates how to use a simple vector of bytes as a memory.
+This is a simple filesystem example project. It demonstrates how to use a vector of bytes as a memory for the file system and reports its current size after doing file reads and writes.
 
 It is assumed that you have installed [rust](https://doc.rust-lang.org/book/ch01-01-installation.html) and [dfx](https://internetcomputer.org/docs/current/developer-docs/setup/install/).
 
@@ -26,16 +24,26 @@ To build and deploy the canister, run the command:
   dfx deploy
 ```
 
-You can now do the canister call:
+You can now do the canister calls:
 ```bash
-  #check initial file system size
-  dfx canister call vector-memory-backend fs_size
+#report current file system size
+dfx canister call vector-memory-backend fs_size
 
-  #test executing the greet function
-  dfx canister call vector-memory-backend greet '("test")'
+#write some content to a new file
+dfx canister call vector-memory-backend write_file '("test1.txt", "some text")'
 
-  #check file system size after creating a few files
-  dfx canister call vector-memory-backend fs_size
+#report current file system size
+dfx canister call vector-memory-backend fs_size
+
+#write some content to another file
+dfx canister call vector-memory-backend write_file '("a/b/c/test2.txt", "some text 2")'
+
+#report contents of the first file created
+dfx canister call vector-memory-backend read_file '("test1.txt")'
+
+#report current file system size
+dfx canister call vector-memory-backend fs_size
+
 ```
 
 After calling the canister, you should see the message:
