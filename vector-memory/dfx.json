@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "vector-memory-backend": {
+      "candid": "src/vector-memory-backend/vector-memory-backend.did",
+      "package": "vector-memory-backend",
+      "build": "./scripts/build.sh",
+      "wasm": "target/wasm32-wasip1/release/no_wasi.wasm",
+      "type": "custom"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

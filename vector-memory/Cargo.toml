@@ -1,0 +1,3 @@
+[workspace]
+members = ["src/vector-memory-backend"]
+resolver = "2"
