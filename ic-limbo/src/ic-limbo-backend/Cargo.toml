@@ -1,0 +1,22 @@
+[package]
+name = "ic-limbo-backend"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.17"
+hex = "0.4.3"
+serde = "1.0.164"
+serde_json = "1.0.97"
+ic-stable-structures = "0.6.7"
+ic-wasi-polyfill = "0.7"
+
+limbo_core = {git = "https://github.com/tursodatabase/limbo" }
+
+

@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "src/ic-limbo-backend"
+]
+resolver = "2"
