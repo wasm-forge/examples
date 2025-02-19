@@ -78,7 +78,9 @@ fn list() -> Vec<(u64, String, String, u32)> {
         if let Some(mut query_result) = query_result {
             loop {
                 match query_result.step().unwrap() {
-                    StepResult::Row(row) => {
+                    StepResult::Row => {
+                        let row = query_result.row().unwrap();
+
                         let r: (u64, String, String, u32) = (
                             row.get::<i64>(0).unwrap() as u64,
                             row.get::<String>(1).unwrap(),
@@ -123,12 +125,13 @@ fn query(sql: String) -> QueryResult {
         if let Some(mut query_result) = query_result {
             loop {
                 match query_result.step().unwrap() {
-                    StepResult::Row(row) => {
+                    StepResult::Row => {
                         let mut vec: Vec<String> = Vec::new();
 
                         // convert all data to string
-                        for value in row.values.iter() {
-                            match value {
+                        let row = query_result.row().unwrap();
+                        for value in row.get_values().iter() {
+                            match value.to_value() {
                                 limbo_core::Value::Null => {
                                     vec.push(String::from("NULL"));
                                 }
