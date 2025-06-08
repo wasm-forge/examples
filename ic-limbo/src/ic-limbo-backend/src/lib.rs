@@ -13,7 +13,7 @@ use limbo_core::{Connection, Database, StepResult, IO};
 thread_local! {
     static IO: Arc<dyn IO> = Arc::new(limbo_core::PlatformIO::new().unwrap());
 
-    static CONNECTION: RefCell<Option<Rc<Connection>>> = RefCell::new(None);
+    static CONNECTION: RefCell<Option<Rc<Connection>>> = const { RefCell::new(None) };
 
     static MEMORY_MANAGER: RefCell<MemoryManager<DefaultMemoryImpl>> =
         RefCell::new(MemoryManager::init(DefaultMemoryImpl::default()));
@@ -24,13 +24,13 @@ const DB_FILE_NAME: &str = "db.db3";
 
 fn open_database() {
     IO.with(|io| {
-        let db: Arc<Database> = Database::open_file(io.clone(), DB_FILE_NAME).unwrap();
+        let db: Arc<Database> = Database::open_file(io.clone(), DB_FILE_NAME, false).unwrap();
 
         // we only keep connection, it will be enough to keep the database alive
         CONNECTION.with(|con| {
             let mut con = con.borrow_mut();
 
-            *con = Some(db.connect());
+            *con = Some(db.connect().unwrap());
         });
     });
 }
@@ -130,21 +130,22 @@ fn query(sql: String) -> QueryResult {
 
                         // convert all data to string
                         let row = query_result.row().unwrap();
-                        for value in row.get_values().iter() {
-                            match value.to_value() {
-                                limbo_core::Value::Null => {
+
+                        for value in row.get_values() {
+                            match value {
+                                limbo_core::OwnedValue::Null => {
                                     vec.push(String::from("NULL"));
                                 }
-                                limbo_core::Value::Integer(i) => {
+                                limbo_core::OwnedValue::Integer(i) => {
                                     vec.push(i.to_string());
                                 }
-                                limbo_core::Value::Float(f) => {
+                                limbo_core::OwnedValue::Float(f) => {
                                     vec.push(f.to_string());
                                 }
-                                limbo_core::Value::Text(s) => {
-                                    vec.push(s.to_string());
+                                limbo_core::OwnedValue::Text(text) => {
+                                    vec.push(text.to_string());
                                 }
-                                limbo_core::Value::Blob(_b) => {
+                                limbo_core::OwnedValue::Blob(items) => {
                                     vec.push(String::from("<<BLOB>>"));
                                 }
                             };

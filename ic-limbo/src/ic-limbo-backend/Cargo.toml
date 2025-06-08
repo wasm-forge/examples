@@ -10,13 +10,13 @@ crate-type = ["cdylib"]
 
 [dependencies]
 candid = "0.10"
-ic-cdk = "0.17"
+ic-cdk = "0.18.3"
 hex = "0.4.3"
 serde = "1.0.164"
 serde_json = "1.0.97"
 ic-stable-structures = "0.6.7"
-ic-wasi-polyfill = "0.7"
+ic-wasi-polyfill = "0.8.2"
 
-limbo_core = {git = "https://github.com/tursodatabase/limbo" }
+limbo_core = "0.0.20"
 
 

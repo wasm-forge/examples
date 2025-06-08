@@ -9,7 +9,7 @@ thread_local! {
 
 #[ic_cdk::query]
 fn greet(name: String) -> String {
-    ic_cdk::api::print(format!("Hello from IC debugger: {}", name));
+    ic_cdk::api::debug_print(format!("Hello from IC debugger: {}", name));
     println!("Hello from WASI: {}", name);
     format!("Hello, {}!", name)
 }
