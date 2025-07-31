@@ -12,7 +12,7 @@ fn eval(js_code: String) -> String {
             eprintln!("Uncaught {e}");
         }
     };
-    return String::from("");
+    String::from("")
 }
 
 #[ic_cdk::init]

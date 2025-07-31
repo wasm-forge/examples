@@ -29,21 +29,21 @@ fn greet(name: String) -> String {
 
     // Get the current directory
     let original_dir = env::current_dir().unwrap();
-    println!("Starting directory: {:?}", original_dir);
+    println!("Starting directory: {original_dir:?}");
 
     // Change to the data directory
     env::set_current_dir("data").unwrap();
 
     // Verify we're in the new directory
     let current_dir = env::current_dir().unwrap();
-    println!("Current directory: {:?}", current_dir);
+    println!("Current directory: {current_dir:?}");
 
     // Create and write to a file in the data directory
     let file_path = Path::new("example.txt");
     let mut file = File::create(file_path).unwrap();
 
     // Write some content to the file
-    writeln!(file, "Hello from {}.", name).unwrap();
+    writeln!(file, "Hello from {name}.").unwrap();
     writeln!(
         file,
         "This is a new line of text, should be there in a file."

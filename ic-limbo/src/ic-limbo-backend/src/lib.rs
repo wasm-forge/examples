@@ -145,7 +145,7 @@ fn query(sql: String) -> QueryResult {
                                 limbo_core::OwnedValue::Text(text) => {
                                     vec.push(text.to_string());
                                 }
-                                limbo_core::OwnedValue::Blob(items) => {
+                                limbo_core::OwnedValue::Blob(_items) => {
                                     vec.push(String::from("<<BLOB>>"));
                                 }
                             };
