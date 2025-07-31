@@ -3,7 +3,7 @@ dfx canister create --all
 
 export WASI_TARGET=wasm32-wasip1
 export WASI_TARGET_=wasm32_wasip1
-export backend=ic_rusqlite_backend
+export backend=ic_rusqlite_direct_backend
 
 export CC_$WASI_TARGET_="/opt/wasi-sdk/bin/clang"
 export CFLAGS_$WASI_TARGET_="--sysroot=/opt/wasi-sdk/share/wasi-sysroot"

@@ -10,7 +10,7 @@ use ic_stable_structures::memory_manager::MemoryId;
 use ic_stable_structures::{memory_manager::MemoryManager, DefaultMemoryImpl};
 
 thread_local! {
-    static DB: RefCell<Option<Connection>> = RefCell::new(None);
+    static DB: RefCell<Option<Connection>> = const { RefCell::new(None) };
     static MEMORY_MANAGER: RefCell<MemoryManager<DefaultMemoryImpl>> =
         RefCell::new(MemoryManager::init(DefaultMemoryImpl::default()));
 }
@@ -89,7 +89,7 @@ fn query(sql: String) -> QueryResult {
                 },
                 Err(err) => {
                     return Err(Error::CanisterError {
-                        message: format!("{:?}", err),
+                        message: format!("{err:?}"),
                     })
                 }
             }

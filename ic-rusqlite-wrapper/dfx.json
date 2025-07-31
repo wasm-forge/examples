@@ -1,0 +1,28 @@
+{
+  "canisters": {
+    "ic-rusqlite-wrapper-backend": {
+      "candid": "src/ic-rusqlite-wrapper-backend/ic-rusqlite-wrapper-backend.did",
+      "package": "ic-rusqlite-wrapper-backend",
+      "build": [
+        "cargo build --release --target wasm32-wasip1",
+        "wasi2ic target/wasm32-wasip1/release/ic_rusqlite_wrapper_backend.wasm target/wasm32-wasip1/release/nowasi.wasm"
+      ],
+      "wasm": "target/wasm32-wasip1/release/nowasi.wasm",
+      "type": "custom",
+      "metadata": [
+        {
+          "name": "candid:service"
+        }
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+  
+}

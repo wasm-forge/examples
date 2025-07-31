@@ -1,11 +1,16 @@
 {
   "canisters": {
     "ic-rusqlite-backend": {
-      "candid": "src/ic-rusqlite-backend/ic-rusqlite-backend.did",
-      "package": "ic-rusqlite-backend",
+      "candid": "src/ic-rusqlite-direct-backend/ic-rusqlite-direct-backend.did",
+      "package": "ic-rusqlite-direct-backend",
       "build": "./scripts/build.sh",
       "wasm": "target/wasm32-wasip1/release/no_wasi.wasm.gz",
-      "type": "custom"
+      "type": "custom",
+      "metadata": [
+        {
+          "name": "candid:service"
+        }
+      ]
     }
   },
   "defaults": {

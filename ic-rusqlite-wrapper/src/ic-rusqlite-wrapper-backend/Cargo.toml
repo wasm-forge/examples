@@ -1,0 +1,16 @@
+[package]
+name = "ic-rusqlite-wrapper-backend"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10"
+ic-cdk = "0.18.5"
+serde = "1.0.164"
+serde_json = "1.0.97"
+hex = "0.4.3"
+
+ic-rusqlite = {git = "https://github.com/wasm-forge/ic-rusqlite.git", rev = "c021f9c7c35ae4cee3ca744876d5e478c716fea9"}
