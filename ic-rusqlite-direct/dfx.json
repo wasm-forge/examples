@@ -1,6 +1,6 @@
 {
   "canisters": {
-    "ic-rusqlite-backend": {
+    "ic-rusqlite-direct-backend": {
       "candid": "src/ic-rusqlite-direct-backend/ic-rusqlite-direct-backend.did",
       "package": "ic-rusqlite-direct-backend",
       "build": "./scripts/build.sh",

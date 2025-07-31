@@ -14,9 +14,9 @@ ic-cdk = "0.18.3"
 hex = "0.4.3"
 serde = "1.0.164"
 serde_json = "1.0.97"
-ic-stable-structures = "0.6.7"
-ic-wasi-polyfill = "0.8.2"
+ic-stable-structures = "0.7.0"
+ic-wasi-polyfill = "0.9.0"
 
-limbo_core = "0.0.20"
+limbo_core = "0.0.22"
 
 

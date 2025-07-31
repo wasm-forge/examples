@@ -22,9 +22,9 @@ fi
 
 cargo build --release --target $WASI_TARGET
 
-mv $RELEASE_DIR/ic_rusqlite_backend.wasm $RELEASE_DIR/built.wasm
+mv $RELEASE_DIR/ic_rusqlite_direct_backend.wasm $RELEASE_DIR/built.wasm
 
-ic-wasm $RELEASE_DIR/built.wasm -o $RELEASE_DIR/meta.wasm metadata candid:service -f ./src/ic-rusqlite-backend/ic-rusqlite-backend.did -v public
+ic-wasm $RELEASE_DIR/built.wasm -o $RELEASE_DIR/meta.wasm metadata candid:service -f ./src/ic-rusqlite-direct-backend/ic-rusqlite-direct-backend.did -v public
 
 wasi2ic $RELEASE_DIR/meta.wasm $RELEASE_DIR/no_wasi.wasm
 

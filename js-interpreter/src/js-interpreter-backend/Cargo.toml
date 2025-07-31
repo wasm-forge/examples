@@ -9,6 +9,6 @@ crate-type = ["cdylib"]
 [dependencies]
 boa_engine = "0.20.0"
 candid = "0.10"
-ic-cdk = "0.18.3"
+ic-cdk = "0.18.5"
 ic-cdk-timers = "0.12"
 ic-wasi-polyfill = "0.9"
