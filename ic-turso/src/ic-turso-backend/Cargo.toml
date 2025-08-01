@@ -1,5 +1,5 @@
 [package]
-name = "ic-limbo-backend"
+name = "ic-turso-backend"
 version = "0.1.0"
 edition = "2021"
 
@@ -17,6 +17,6 @@ serde_json = "1.0.97"
 ic-stable-structures = "0.7.0"
 ic-wasi-polyfill = "0.9.0"
 
-limbo_core = "0.0.22"
-
+turso = "0.1.3"
+tokio = { version = "1.0" }
 

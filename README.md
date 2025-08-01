@@ -20,8 +20,8 @@ Running the Sqlite server on the Internet Computer while managing ic-wasi-polygi
 ### ic-rusqlite-wrapper
 Running the Sqlite server on the Internet Computer using the helper wrapper project.
 
-### ic-limbo
-Running the Limbo database server on the Internet Computer.
+### ic-turso
+Running the turso database server on the Internet Computer.
 
 ### js-interpreter
 Running the Boa JavaScript interpretter on the Internet Computer.

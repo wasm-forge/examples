@@ -1,5 +1,5 @@
 [workspace]
 members = [
-    "src/ic-limbo-backend"
+    "src/ic-turso-backend"
 ]
 resolver = "2"

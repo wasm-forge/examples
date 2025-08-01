@@ -1,6 +1,6 @@
-# Run Limbo on the IC
+# Run turso on the IC
 
-This project shows how to compile and run the Limbo database (a compatible Sqlite alternative written in Rust) in the IC canister.
+This project shows how to compile and run the turso database (a compatible Sqlite alternative written in Rust) in the IC canister.
 
 
 ## Prerequisites

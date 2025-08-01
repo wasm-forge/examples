@@ -1,11 +1,16 @@
 {
   "canisters": {
-    "ic-limbo-backend": {
-      "candid": "src/ic-limbo-backend/ic-limbo-backend.did",
-      "package": "ic-limbo-backend",
+    "ic-turso-backend": {
+      "candid": "src/ic-turso-backend/ic-turso-backend.did",
+      "package": "ic-turso-backend",
       "build": "./scripts/build.sh",
       "wasm": "target/wasm32-wasip1/release/no_wasi.wasm.gz",
-      "type": "custom"
+      "type": "custom",
+      "metadata": [
+        {
+          "name": "candid:service"
+        }
+      ]
     }
   },
   "defaults": {
