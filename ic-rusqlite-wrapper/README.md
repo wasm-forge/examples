@@ -1,7 +1,7 @@
 # `ic-rusqlite-wrapper`
 
-The project demonstrates use of the `ic-ruslite` helper wrapper project. It shows a simple design to on how you can attach using a database to your existing canister project.
+The project demonstrates use of the `ic-ruslite` helper package. It shows a simple design to on how you can attach a database to your Rust canister project.
 
-This example is the same as the `ic-rusqlite-direct`, but it uses the `ic-rusqlite` wrapper package to hide some implementatin complexity.
+This example has the same functionality as `ic-rusqlite-direct`, but it uses the `ic-rusqlite` package to hide some implementation complexity.
 
-To run the example, make sure the WASI-SDK is installed and .
+Checkout the [ic-rusqlite](https://github.com/wasm-forge/ic-rusqlite) repository for more information.

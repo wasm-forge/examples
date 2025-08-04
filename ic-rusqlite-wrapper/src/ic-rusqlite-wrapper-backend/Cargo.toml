@@ -10,7 +10,7 @@ crate-type = ["cdylib"]
 candid = "0.10"
 ic-cdk = "0.18.5"
 serde = "1.0.164"
-serde_json = "1.0.97"
+serde_json = "1.0.142"
 hex = "0.4.3"
 
-ic-rusqlite = {git = "https://github.com/wasm-forge/ic-rusqlite.git", rev = "c021f9c7c35ae4cee3ca744876d5e478c716fea9"}
+ic-rusqlite = {git = "https://github.com/wasm-forge/ic-rusqlite.git", rev = "038ee4552b5dc4da0d903b9c5ae5ca5e013c7c9a"}
