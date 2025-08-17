@@ -14,11 +14,8 @@ Working with folders via std::fs.
 ### vector-memory
 Creating a file system inside a vector memory.
 
-### ic-rusqlite-direct
-Running the Sqlite server on the Internet Computer while managing ic-wasi-polygill.
-
-### ic-rusqlite-wrapper
-Running the Sqlite server on the Internet Computer using the helper wrapper project.
+### ic-rusqlite
+Running the Sqlite server using the `ic-rusqlite` helper project.
 
 ### ic-turso
 Running the turso database server on the Internet Computer.
