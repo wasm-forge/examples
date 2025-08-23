@@ -1,6 +1,6 @@
 # Examples
 
-This repository contains various examples of building wasi canisters for running on the Internet Computer.
+This repository contains various examples of building WASI canisters for running on the Internet Computer.
 
 ### hello-world
 Creating a "Hello World" application using Rust and running it on the Internet Computer. 
@@ -12,7 +12,7 @@ Creating a "Hello World" application using C++ and running it on the Internet Co
 Working with folders via std::fs.
 
 ### vector-memory
-Creating a file system inside a vector memory.
+Creating the `stable-fs` file system inside a vector memory.
 
 ### ic-rusqlite
 Running the Sqlite server using the `ic-rusqlite` helper project.
@@ -22,7 +22,6 @@ Running the turso database server on the Internet Computer.
 
 ### js-interpreter
 Running the Boa JavaScript interpretter on the Internet Computer.
-
 
 # Examples from other repositories
 
