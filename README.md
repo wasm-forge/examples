@@ -9,7 +9,7 @@ Creating a "Hello World" application using Rust and running it on the Internet C
 Creating a "Hello World" application using C++ and running it on the Internet Computer.
 
 ### stable-fs
-Working with folders via std::fs.
+Working with folders via `std::fs`.
 
 ### vector-memory
 Creating the `stable-fs` file system inside a vector memory.

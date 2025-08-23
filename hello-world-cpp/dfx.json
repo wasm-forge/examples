@@ -5,7 +5,12 @@
       "package": "hello-world-cpp-backend",
       "build": "./scripts/build.sh",
       "wasm": "target/no_wasi.wasm",
-      "type": "custom"
+      "type": "custom",
+      "metadata": [
+        {
+          "name": "candid:service"
+        }
+      ]
     }
   },
   "defaults": {

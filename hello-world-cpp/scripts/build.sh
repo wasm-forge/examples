@@ -19,7 +19,7 @@ fi
 
 dfx canister create hello-world-cpp-backend
 
-/opt/wasi-sdk/bin/clang++ -mexec-model=reactor -fno-exceptions src/main.cpp -L./ic-wasi-polyfill/target/wasm32-wasip1/release -lic_wasi_polyfill -o target/main.wasm
+clang++ -mexec-model=reactor -fno-exceptions src/main.cpp -L./ic-wasi-polyfill/target/wasm32-wasip1/release -lic_wasi_polyfill -o target/main.wasm
 
 #ic-wasm target/main.wasm -o target/meta.wasm metadata candid:service -f ./src/hello-cpp.did -v public
 
