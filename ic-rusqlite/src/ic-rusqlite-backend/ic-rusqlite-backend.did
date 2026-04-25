@@ -10,6 +10,6 @@ type Result = variant {
 
 service : () -> {
   "add" : (text, text, nat32) -> ();
-  "list" : () -> (vec record { nat64; text; text; nat32 }) query;
+  "list" : () -> (vec record { int64; text; text; nat32 }) query;
   "query": (text) -> (Result);
 }

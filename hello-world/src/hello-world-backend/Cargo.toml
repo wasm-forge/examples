@@ -9,6 +9,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 candid = "0.10"
-ic-cdk = "0.18.3"
-ic-stable-structures = "0.6.7"
-ic-wasi-polyfill = {version = "0.8.2", features= ["report_wasi_calls"]}
+ic-cdk = "0.20.0"
+ic-stable-structures = "0.7"
+ic-wasi-polyfill = "0.13.0"
+

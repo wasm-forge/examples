@@ -14,7 +14,7 @@ fn add(name: String, data: String, age: u32) {
 }
 
 #[ic_cdk::query]
-fn list() -> Vec<(u64, String, String, u32)> {
+fn list() -> Vec<(i64, String, String, u32)> {
     // get connection
     ic_rusqlite::with_connection(|conn| {
         // prepare statement
